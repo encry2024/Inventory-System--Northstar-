@@ -23,15 +23,16 @@ if(isset($_REQUEST['submit'])!='')
 		$errCount++;
 		$_SESSION['error'] += array('passwordTbx' => "Password cannot be empty");
 	} 
-
+header('Location: loginPage.php');
 	if($errCount == 0) {
 
-		$sql = mysql_query("Select username, password FROM user_tbl WHERE username = '".mysql_real_escape_string($user)."' AND password = '".mysql_real_escape_string($pass)."'") or die(mysql_error());
+		$sql = mysql_query("Select * FROM user_tbl WHERE username = '".mysql_real_escape_string($user)."' AND password = '".mysql_real_escape_string($pass)."'") or die(mysql_error());
 
 		$row = mysql_fetch_array($sql);
 		if($row["username"]==$user && $row["password"]==$pass)
 		{
-			$_SESSION['sysMsg'] = array('$strSuccess' => "You have successfully logged in!" );
+			$_SESSION['userFirstName'] = $row['firstname'];
+			header('Location: mainPage.php');
 
 		}
 		elseif($row["username"]!=$user && $row["password"]!=$pass)
@@ -39,7 +40,7 @@ if(isset($_REQUEST['submit'])!='')
 			$_SESSION['sysMsg'] = array('$strFail' => "Incorrect Username or Password" );
 		}
 	}
-	header('Location: loginPage.php');
+	
 	//$_POST['usernameTbx'] = $_SESSION['usernameTbx'];
 
 }
