@@ -57,25 +57,24 @@ if(isset($_REQUEST['submit'])!='')
 	}
 	if ($errCount == 0)
 	{
-		$sql2="Select username from admin_tbl WHERE username='". mysql_real_escape_string($_REQUEST['usernameTb']) ."'";
+		$sql2=mysql_query("Select username from user_tbl WHERE username='". mysql_real_escape_string($_REQUEST['usernameTb']) ."'");
 		if (mysql_num_rows($sql2) == 0)
 		{
-			$sql1="insert into admin_tbl(username,password,firstname,lastname) values('".mysql_real_escape_string($_REQUEST['usernameTb'])."', '".mysql_real_escape_string($_REQUEST['passwordTb'])."', '".mysql_real_escape_string($_REQUEST['firstNameTb'])."', '".mysql_real_escape_string($_REQUEST['lastNameTb'])."')";
+			$sql1="insert into user_tbl(username,password,firstname,lastname) values('".mysql_real_escape_string($_REQUEST['usernameTb'])."', '".mysql_real_escape_string($_REQUEST['passwordTb'])."', '".mysql_real_escape_string($_REQUEST['firstNameTb'])."', '".mysql_real_escape_string($_REQUEST['lastNameTb'])."')";
 			$res2=mysql_query($sql1);
 			if($res2)
 			{
-				$_SESSION['sysMsg'] = array('$strSuccess' => "You have successfully registered!");
+				$_SESSION['sysMsg'] = array('$strSuccess' => "You have successfully registered!" );
 
 			}
 		}
 		else {
-			$_SESSION['sysMsg'] = array('$strFail' => "Username already exists" );
+			$_SESSION['sysMsg'] = array('usernameTb' => "Username already exists" );
 		}
 
 
 		}
-		//header('Location: inventoryRegistrationForm.php');
-		var_dump($_SESSION['usernameTb']);
+		header('Location: showpage.php?page=users');
 	}
 
 	?>

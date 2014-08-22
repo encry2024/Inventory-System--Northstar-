@@ -1,4 +1,4 @@
-<?php session_start();?>
+
 <html class="no-js" lang="en" >
 <head>
   <body>
@@ -17,14 +17,14 @@
 
  </head>
 
- <form name="" method="POST" action="regHeadset.php">
+ <form name="" method="POST" action="regHeadset.php" >
   <!--TITLE START-->
   <nav class="top-bar" data-topbar data-options="is_hover: false">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="#">Main Page</a></h1>
+        <h1><a href="#"><?= $this->title; ?></a></h1>
       </li>
-      <!-- <li class="toggle-topbar"><a href="#"><span>Menus</span></a></li> -->
+      <!-- <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li> -->
     </ul>
     <section class="top-bar-section">
       <!-- Right Nav Section -->
@@ -46,16 +46,16 @@
     <!--FIELD START-->
     <div class="row">
       <div class="large-3 columns">
-
-      </div>
       <div class="large-9 columns">
         <ul class="inline-list right">
-          <li><a href="headset.php"></a></li>
+          <li><a href="#"></a></li>
           <li><a href="#"></a></li>
           <li><a href="#"></a></li>
           <li><a href="#"></a></li>
         </ul>
       </div>
+      </div>
+<!--  -->
     </div>
 
     <div id="echoTest"></div>
@@ -73,9 +73,10 @@
         </div>
         <div class="panel">
           <ul class="vertical-nav">
-            <li><a href="?id=headset">Headsets</a></li>
-            <li><a href="#">Users</a></li>
-            <li><a href="#">Persons</a></li>
+            <li><a href="?page=headsets">Headsets</a></li>
+            <li><a href="?page=users">Users</a></li>
+            <li><a href="?page=persons">Persons</a></li>
+            <li><a href="?page=logs">Logs</a></li>
           </ul>
         </div>
       </div>
@@ -107,24 +108,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-<!-- <table>
-
-  <thead>
-    <tr>
-      <th width="200">Headset ID#</th>
-      <th width="200">Assigned to</th>
-      <th width="200">Assigned Date</th>
-      <th width="200">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <p>There are no available headset right now.</p>
-  </tbody>
-
-</table> -->

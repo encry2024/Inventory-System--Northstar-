@@ -137,7 +137,6 @@
               }
 
               ?>
-
             </div>
           </div>
         </div>
@@ -152,8 +151,6 @@
     <script>
     $(document).ready(function() {
       $("#div1").fadeOut(2500);
-    /*$("submit").click(function(){
-    });*/
   });
     </script>
   </body>

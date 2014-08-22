@@ -32,7 +32,7 @@ if(isset($_REQUEST['submit'])!='')
 		if($row["username"]==$user && $row["password"]==$pass)
 		{
 			$_SESSION['userFirstName'] = $row['firstname'];
-			header('Location: showpage.php?page=persons');
+			header('Location: ?page=mainPage.php');
 
 		}
 		elseif($row["username"]!=$user && $row["password"]!=$pass)

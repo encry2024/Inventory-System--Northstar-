@@ -1,10 +1,10 @@
-<?php session_start();?>
+
 <html class="no-js" lang="en" >
 <head>
   <body>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Foundation 5</title>
+   <title>Northstar Inventory System</title>
 
    <!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
    <link rel="stylesheet" href="css/normalize.css">
@@ -17,14 +17,14 @@
 
  </head>
 
- <form name="" method="POST" action="regHeadset.php">
+ <form name="" method="POST" action="assignFnc.php">
   <!--TITLE START-->
   <nav class="top-bar" data-topbar data-options="is_hover: false">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="#">Main Page</a></h1>
+        <h1><a href="#"><?= $this->title; ?></a></h1>
       </li>
-      <!-- <li class="toggle-topbar"><a href="#"><span>Menus</span></a></li> -->
+      <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li>
     </ul>
     <section class="top-bar-section">
       <!-- Right Nav Section -->
@@ -50,7 +50,7 @@
       </div>
       <div class="large-9 columns">
         <ul class="inline-list right">
-          <li><a href="headset.php"></a></li>
+          <li><a href="#"></a></li>
           <li><a href="#"></a></li>
           <li><a href="#"></a></li>
           <li><a href="#"></a></li>
@@ -73,9 +73,10 @@
         </div>
         <div class="panel">
           <ul class="vertical-nav">
-            <li><a href="?id=headset">Headsets</a></li>
-            <li><a href="#">Users</a></li>
-            <li><a href="#">Persons</a></li>
+            <li><a href="?page=headsets">Headsets</a></li>
+            <li><a href="?page=users">Users</a></li>
+            <li><a href="?page=persons">Persons</a></li>
+            <li><a href="?page=logs">Logs</a></li
           </ul>
         </div>
       </div>

@@ -98,6 +98,7 @@ textarea {
 select {
   width: 100%; }
 
+
 .row {
   width: 100%;
   margin-left: auto;
@@ -2687,6 +2688,9 @@ code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: bold;
   color: #bd260d; }
+  .tableOne td,tr, table,thead,th {
+    text-align:center;
+  }
 
 /* Lists */
 ul,

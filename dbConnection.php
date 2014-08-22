@@ -2,7 +2,7 @@
 $hostname="localhost"; //local server name default localhost
 $username="root";  //mysql username default is root.
 $password="";       //blank if no password is set for mysql.
-$database="Northstar Inventory System";  //database name which you created
+$database="northstar inventory system";  //database name which you created
 $con=mysql_connect($hostname,$username,$password);
 if(! $con)
 {
