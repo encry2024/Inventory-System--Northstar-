@@ -17,14 +17,14 @@
 
  </head>
 
- <form name="" method="POST" action="registrationFnc.php">
+ <form name="" method="POST" action="regHeadset.php">
   <!--TITLE START-->
   <nav class="top-bar" data-topbar data-options="is_hover: false">
     <ul class="title-area">
       <li class="name">
         <h1><a href="#">Main Page</a></h1>
       </li>
-      <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li>
+      <!-- <li class="toggle-topbar"><a href="#"><span>Menus</span></a></li> -->
     </ul>
     <section class="top-bar-section">
       <!-- Right Nav Section -->
@@ -43,37 +43,26 @@
     <!--TITLE END-->
 
     <!--FIELD START-->
-  <div class="row">
-    <div class="large-3 columns">
+    <div class="row">
+      <div class="large-3 columns">
 
+      </div>
+      <div class="large-9 columns">
+        <ul class="inline-list right">
+          <li><a href="headset.php"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
     </div>
-    <div class="large-9 columns">
-      <ul class="inline-list right">
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-      </ul>
-    </div>
-  </div>
 
+    <div id="echoTest"></div>
 
     <div class="row">    
       <div class="large-9 push-3 columns">
         <div class="panel">
-          <table>
-  <thead>
-    <tr>
-      <th width="200">Headset ID#</th>
-      <th width="200">Assigned to</th>
-      <th width="200">Assigned Date</th>
-      <th width="200">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <p>There is no available headset right now.</p>
-  </tbody>
-</table>
+          <?= $this->content; ?>
         </div>
       </div>
 
@@ -83,7 +72,7 @@
         </div>
         <div class="panel">
           <ul class="vertical-nav">
-            <li><a href="#">Headsets</a></li>
+            <li><a href="?id=headset">Headsets</a></li>
             <li><a href="#">Users</a></li>
             <li><a href="#">Persons</a></li>
           </ul>
@@ -117,3 +106,24 @@
   </script>
 </body>
 </html>
+
+
+
+
+
+
+<!-- <table>
+
+  <thead>
+    <tr>
+      <th width="200">Headset ID#</th>
+      <th width="200">Assigned to</th>
+      <th width="200">Assigned Date</th>
+      <th width="200">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <p>There are no available headset right now.</p>
+  </tbody>
+
+</table> -->
